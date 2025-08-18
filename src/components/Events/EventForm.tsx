@@ -1,5 +1,4 @@
 // components/Events/EventForm.tsx
-import React, { useState } from "react";
 import React, { useState, useEffect } from "react";
 import { X } from "lucide-react";
 import { EventFormData, EventFormProps } from "./Types/EventTypes";
@@ -40,39 +39,42 @@ export default function EventForm({ isOpen, onClose, event }: EventFormProps) {
   const [formData, setFormData] = useState<EventFormData>({
     ...initialFormData,
   });
-  const [currentImage, setCurrentImage] = useState<string>('');
+  const [currentImage, setCurrentImage] = useState<string>("");
 
   useEffect(() => {
     if (event) {
       // Precargar datos del evento para edición
       setFormData({
-        eventTitle: event.eventTitle || '',
-        eventObjective: event.eventObjective || '',
-        eventLocation: event.eventLocation || '',
-        address: event.address || '',
-        startDate: event.startDate || '',
-        endDate: event.endDate || '',
-        registrationStart: event.registrationStart || '',
-        registrationEnd: event.registrationEnd || '',
+        eventTitle: event.eventTitle || "",
+        eventObjective: event.eventObjective || "",
+        eventLocation: event.eventLocation || "",
+        address: event.address || "",
+        startDate: event.startDate || "",
+        endDate: event.endDate || "",
+        registrationStart: event.registrationStart || "",
+        registrationEnd: event.registrationEnd || "",
         careerIds: event.careerIds || [],
         targetTeachers: event.targetTeachers || false,
         targetStudents: event.targetStudents || false,
         targetAdministrative: event.targetAdministrative || false,
         targetGeneral: event.targetGeneral || false,
         isVirtual: event.isVirtual || false,
-        meetingUrl: event.meetingUrl || '',
-        maxCapacity: event.maxCapacity?.toString() || '',
-        requiresRegistration: event.requiresRegistration !== undefined ? event.requiresRegistration : true,
+        meetingUrl: event.meetingUrl || "",
+        maxCapacity: event.maxCapacity?.toString() || "",
+        requiresRegistration:
+          event.requiresRegistration !== undefined
+            ? event.requiresRegistration
+            : true,
         isPublic: event.isPublic !== undefined ? event.isPublic : true,
         tags: event.tags || [],
         imageUrls: event.imageUrls || [],
-        additionalDetails: event.additionalDetails || '',
+        additionalDetails: event.additionalDetails || "",
       });
-      setCurrentImage(event.image || '');
+      setCurrentImage(event.image || "");
     } else {
       // Resetear formulario para nuevo evento
       setFormData(initialFormData);
-      setCurrentImage('');
+      setCurrentImage("");
     }
   }, [event]);
   if (!isOpen) return null;
@@ -210,8 +212,8 @@ export default function EventForm({ isOpen, onClose, event }: EventFormProps) {
           </div>
 
           {/* Event Image */}
-          <ImageUpload 
-            onImageUpload={handleImageUpload} 
+          <ImageUpload
+            onImageUpload={handleImageUpload}
             currentImage={currentImage}
             isEditing={!!event}
           />
