@@ -23,11 +23,11 @@ export default function Sidebar({
   setIsMobileMenuOpen 
 }: SidebarProps) {
   const menuItems = [
-    { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
-    { id: 'events', label: 'Events', icon: Calendar },
-    { id: 'attendees', label: 'Attendees', icon: Users },
-    { id: 'staff', label: 'Admin Staff', icon: UserPlus },
-    { id: 'settings', label: 'Settings', icon: Settings }
+    { id: 'dashboard', label: 'Panel Principal', icon: LayoutDashboard },
+    { id: 'events', label: 'Eventos', icon: Calendar },
+    { id: 'attendees', label: 'Asistentes', icon: Users },
+    { id: 'staff', label: 'Personal Admin', icon: UserPlus },
+    { id: 'settings', label: 'Configuración', icon: Settings }
   ];
 
   const handleMenuClick = (id: string) => {
@@ -59,7 +59,7 @@ export default function Sidebar({
         ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
       `}>
         <div className="p-6 border-b">
-          <h1 className="text-xl font-bold text-gray-800">Event Admin</h1>
+          <h1 className="text-xl font-bold text-gray-800">SyncUpC Admin</h1>
         </div>
         
         <nav className="mt-6">
@@ -70,7 +70,7 @@ export default function Sidebar({
               className={`
                 w-full flex items-center px-6 py-3 text-left transition-colors duration-200
                 ${activeTab === id 
-                  ? 'bg-lime-50 border-r-3 border-lime-500 text-lime-700' 
+                  ? 'bg-green-50 border-r-3 border-green-500 text-green-700' 
                   : 'text-gray-600 hover:bg-gray-50 hover:text-gray-800'
                 }
               `}

@@ -18,6 +18,7 @@ function App() {
   const [showEventForm, setShowEventForm] = useState(false);
   const [editingEvent, setEditingEvent] = useState(null);
   const [viewingEventAttendees, setViewingEventAttendees] = useState<number | null>(null);
+  const [viewingEventDetails, setViewingEventDetails] = useState<any>(null);
 
   const handleLogin = (email: string, password: string) => {
     // In a real app, you would validate credentials with your backend
@@ -75,6 +76,14 @@ function App() {
     setActiveTab('events');
   };
 
+  const handleViewEventDetails = (event: any) => {
+    setViewingEventDetails(event);
+  };
+
+  const handleBackFromEventDetails = () => {
+    setViewingEventDetails(null);
+  };
+
   // Show authentication forms if not authenticated
   if (!isAuthenticated) {
     if (authMode === 'login') {
@@ -104,15 +113,26 @@ function App() {
       );
     }
 
+    if (viewingEventDetails) {
+      return (
+        <EventDetails 
+          event={viewingEventDetails}
+          onBack={handleBackFromEventDetails}
+          onEdit={handleEditEvent}
+        />
+      );
+    }
+
     switch (activeTab) {
       case 'dashboard':
-        return <Dashboard />;
+        return <Dashboard onViewEventDetails={handleViewEventDetails} />;
       case 'events':
         return (
           <EventList 
             onCreateEvent={handleCreateEvent}
             onEditEvent={handleEditEvent}
             onViewAttendees={handleViewAttendees}
+            onViewDetails={handleViewEventDetails}
           />
         );
       case 'attendees':
@@ -123,11 +143,11 @@ function App() {
         return (
           <div className="space-y-6">
             <div>
-              <h1 className="text-2xl font-bold text-gray-900">Settings</h1>
-              <p className="text-gray-600">Manage your application settings</p>
+              <h1 className="text-2xl font-bold text-gray-900">Configuración</h1>
+              <p className="text-gray-600">Gestiona la configuración de tu aplicación</p>
             </div>
             <div className="bg-white rounded-lg shadow-sm border border-gray-100 p-6">
-              <p className="text-gray-600">Settings panel coming soon...</p>
+              <p className="text-gray-600">Panel de configuración próximamente...</p>
             </div>
           </div>
         );
