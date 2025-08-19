@@ -9,6 +9,14 @@ interface Event {
   eventLocation: string;
   attendees: number;
   confirmed: number;
+  eventObjective: string;
+  address: string;
+  isVirtual: boolean;
+  maxCapacity: number;
+  requiresRegistration: boolean;
+  isPublic: boolean;
+  tags: Array<string>;
+  meetingUrl?: string;
   status: "draft" | "published" | "completed" | "cancelled";
   image: string;
 }
@@ -41,13 +49,14 @@ export default function EventList({
       status: "published",
       image:
         "https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&w=400",
-      eventObjective: "Semana internacional de descubrimiento con actividades culturales y académicas para estudiantes.",
+      eventObjective:
+        "Semana internacional de descubrimiento con actividades culturales y académicas para estudiantes.",
       address: "Campus UPC Sabanas, Edificio Principal",
       isVirtual: false,
       maxCapacity: 50,
       requiresRegistration: true,
       isPublic: true,
-      tags: ["educación", "internacional", "estudiantes"]
+      tags: ["educación", "internacional", "estudiantes"],
     },
     {
       id: 2,
@@ -60,13 +69,14 @@ export default function EventList({
       status: "published",
       image:
         "https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=400",
-      eventObjective: "Congreso enfocado en las últimas tendencias tecnológicas y su impacto en la industria.",
+      eventObjective:
+        "Congreso enfocado en las últimas tendencias tecnológicas y su impacto en la industria.",
       address: "Centro de Convenciones, Auditorio Central",
       isVirtual: false,
       maxCapacity: 500,
       requiresRegistration: true,
       isPublic: true,
-      tags: ["tecnología", "innovación", "congreso"]
+      tags: ["tecnología", "innovación", "congreso"],
     },
     {
       id: 3,
@@ -79,13 +89,14 @@ export default function EventList({
       status: "completed",
       image:
         "https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg?auto=compress&cs=tinysrgb&w=400",
-      eventObjective: "Encuentro para conectar egresados con estudiantes actuales y facilitar mentorías profesionales.",
+      eventObjective:
+        "Encuentro para conectar egresados con estudiantes actuales y facilitar mentorías profesionales.",
       address: "Universidad, Auditorio Principal",
       isVirtual: false,
       maxCapacity: 100,
       requiresRegistration: true,
       isPublic: false,
-      tags: ["networking", "mentores", "egresados"]
+      tags: ["networking", "mentores", "egresados"],
     },
     {
       id: 4,
@@ -98,14 +109,15 @@ export default function EventList({
       status: "draft",
       image:
         "https://images.pexels.com/photos/1181677/pexels-photo-1181677.jpeg?auto=compress&cs=tinysrgb&w=400",
-      eventObjective: "Taller práctico sobre desarrollo web moderno con tecnologías actuales.",
+      eventObjective:
+        "Taller práctico sobre desarrollo web moderno con tecnologías actuales.",
       address: "Laboratorio de Computación A",
       isVirtual: true,
       meetingUrl: "https://meet.google.com/abc-defg-hij",
       maxCapacity: 30,
       requiresRegistration: true,
       isPublic: true,
-      tags: ["desarrollo", "web", "taller"]
+      tags: ["desarrollo", "web", "taller"],
     },
   ];
 
@@ -212,10 +224,15 @@ export default function EventList({
                     event.status
                   )}`}
                 >
-                  {event.status === 'published' ? 'Publicado' : 
-                   event.status === 'draft' ? 'Borrador' :
-                   event.status === 'completed' ? 'Completado' : 
-                   event.status === 'cancelled' ? 'Cancelado' : event.status}
+                  {event.status === "published"
+                    ? "Publicado"
+                    : event.status === "draft"
+                    ? "Borrador"
+                    : event.status === "completed"
+                    ? "Completado"
+                    : event.status === "cancelled"
+                    ? "Cancelado"
+                    : event.status}
                 </span>
               </div>
             </div>
