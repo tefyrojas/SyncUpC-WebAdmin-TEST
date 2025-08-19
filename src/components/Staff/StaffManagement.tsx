@@ -67,13 +67,13 @@ export default function StaffManagement() {
   const getRoleColor = (role: Staff['role']) => {
     switch (role) {
       case 'admin':
-        return 'bg-red-100 text-red-700';
+        return { backgroundColor: '#fef2f2', color: '#dc2626' };
       case 'moderator':
-        return 'bg-blue-100 text-blue-700';
+        return { backgroundColor: '#eff6ff', color: '#2563eb' };
       case 'organizer':
-        return 'bg-green-100 text-green-700';
+        return { backgroundColor: '#B9FF5020', color: '#B9FF50' };
       default:
-        return 'bg-gray-100 text-gray-700';
+        return { backgroundColor: '#f3f4f6', color: '#374151' };
     }
   };
 
@@ -93,7 +93,7 @@ export default function StaffManagement() {
         </div>
         <button
           onClick={() => setShowAddForm(true)}
-          className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors flex items-center space-x-2"
+          className="text-white px-4 py-2 rounded-lg transition-colors flex items-center space-x-2" style={{ backgroundColor: '#B9FF50' }}
         >
           <Plus size={20} />
           <span>Agregar Personal</span>
@@ -111,12 +111,14 @@ export default function StaffManagement() {
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+             className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg transition-colors" style={{ '--tw-ring-color': '#B9FF50' } as React.CSSProperties}
             />
           </div>
           <select
             value={roleFilter}
             onChange={(e) => setRoleFilter(e.target.value)}
            className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-transparent"
+           className="border border-gray-300 rounded-lg px-3 py-2 transition-colors" style={{ '--tw-ring-color': '#B9FF50' } as React.CSSProperties}
           >
            <option value="all">Todos los Roles</option>
            <option value="admin">Administrador</option>
@@ -140,6 +142,7 @@ export default function StaffManagement() {
                 <div>
                   <h3 className="font-semibold text-gray-900">{member.name}</h3>
                   <span className={`px-2 py-1 rounded-full text-xs font-medium ${getRoleColor(member.role)}`}>
+                  <span className="px-2 py-1 rounded-full text-xs font-medium" style={getRoleColor(member.role)}>
                     {member.role === 'admin' ? 'Administrador' :
                      member.role === 'moderator' ? 'Moderador' :
                      member.role === 'organizer' ? 'Organizador' : member.role}
@@ -196,6 +199,7 @@ export default function StaffManagement() {
                   value={newStaff.name}
                   onChange={(e) => setNewStaff({ ...newStaff, name: e.target.value })}
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg transition-colors" style={{ '--tw-ring-color': '#B9FF50' } as React.CSSProperties}
                   placeholder="Ingresa el nombre completo"
                 />
               </div>
@@ -208,6 +212,7 @@ export default function StaffManagement() {
                   value={newStaff.email}
                   onChange={(e) => setNewStaff({ ...newStaff, email: e.target.value })}
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg transition-colors" style={{ '--tw-ring-color': '#B9FF50' } as React.CSSProperties}
                   placeholder="Ingresa el correo electrónico"
                 />
               </div>
@@ -219,6 +224,7 @@ export default function StaffManagement() {
                   value={newStaff.phone}
                   onChange={(e) => setNewStaff({ ...newStaff, phone: e.target.value })}
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg transition-colors" style={{ '--tw-ring-color': '#B9FF50' } as React.CSSProperties}
                   placeholder="Ingresa el número de teléfono"
                 />
               </div>
@@ -229,6 +235,7 @@ export default function StaffManagement() {
                   value={newStaff.role}
                   onChange={(e) => setNewStaff({ ...newStaff, role: e.target.value as Staff['role'] })}
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg transition-colors" style={{ '--tw-ring-color': '#B9FF50' } as React.CSSProperties}
                 >
                   <option value="organizer">Organizador</option>
                   <option value="moderator">Moderador</option>
@@ -246,7 +253,7 @@ export default function StaffManagement() {
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
+                  className="px-4 py-2 text-white rounded-lg transition-colors" style={{ backgroundColor: '#B9FF50' }}
                 >
                   Agregar Personal
                 </button>
