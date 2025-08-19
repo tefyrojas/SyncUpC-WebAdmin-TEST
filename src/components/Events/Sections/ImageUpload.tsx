@@ -42,6 +42,7 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({
           </button>
           <div className="mt-2 text-center">
             <label className="cursor-pointer text-green-600 hover:text-green-700 text-sm">
+            <label className="cursor-pointer text-sm transition-colors" style={{ color: '#B9FF50' }}>
               Cambiar imagen
               <input
                 type="file"
@@ -57,6 +58,7 @@ export const ImageUpload: React.FC<ImageUploadProps> = ({
         <Upload className="mx-auto h-12 w-12 text-gray-400 mb-2" />
         <div className="text-sm text-gray-600">
             <label className="cursor-pointer text-green-600 hover:text-green-700">
+            <label className="cursor-pointer transition-colors" style={{ color: '#B9FF50' }}>
             Subir una imagen
             <input
               type="file"

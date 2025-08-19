@@ -17,6 +17,7 @@ export const VirtualEventSection: React.FC<VirtualEventProps> = ({
             checked={formData.isVirtual}
             onChange={onChange}
             className="rounded border-gray-300 text-lime-600 focus:ring-lime-500"
+            className="rounded border-gray-300 focus:ring-2" style={{ accentColor: '#B9FF50', '--tw-ring-color': '#B9FF50' } as React.CSSProperties}
           />
           <span className="text-sm font-medium text-gray-700">
             Evento Virtual
@@ -34,6 +35,7 @@ export const VirtualEventSection: React.FC<VirtualEventProps> = ({
               value={formData.meetingUrl}
               onChange={onChange}
               className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent"
+              className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg transition-colors" style={{ '--tw-ring-color': '#B9FF50' } as React.CSSProperties}
               placeholder="URL de la reunión"
             />
           </div>
@@ -55,6 +57,7 @@ export const VirtualEventSection: React.FC<VirtualEventProps> = ({
             value={formData.maxCapacity}
             onChange={onChange}
             className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent"
+            className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg transition-colors" style={{ '--tw-ring-color': '#B9FF50' } as React.CSSProperties}
             placeholder="0 = Sin límite"
             min="0"
           />

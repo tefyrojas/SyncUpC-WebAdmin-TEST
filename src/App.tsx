@@ -81,6 +81,7 @@ function App() {
 
   const handleViewEventDetails = (event: any) => {
     setViewingEventDetails(event);
+    // No cambiar activeTab para mantener la navegación activa
   };
 
   const handleBackFromEventDetails = () => {

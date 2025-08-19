@@ -165,7 +165,7 @@ export default function EventList({
         </div>
         <button
           onClick={onCreateEvent}
-          className="bg-lime-500 text-white px-4 py-2 rounded-lg hover:bg-lime-600 transition-colors duration-200 flex items-center space-x-2"
+          className="text-white px-4 py-2 rounded-lg transition-colors duration-200 flex items-center space-x-2" style={{ backgroundColor: '#B9FF50' }}
         >
           <Plus size={20} />
           <span>Crear Evento</span>
@@ -186,6 +186,7 @@ export default function EventList({
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent"
+              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg transition-colors" style={{ '--tw-ring-color': '#B9FF50' } as React.CSSProperties}
             />
           </div>
           <div className="flex items-center space-x-2">
@@ -194,6 +195,7 @@ export default function EventList({
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value)}
               className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-transparent"
+              className="border border-gray-300 rounded-lg px-3 py-2 transition-colors" style={{ '--tw-ring-color': '#B9FF50' } as React.CSSProperties}
             >
               <option value="all">Todos los Estados</option>
               <option value="published">Publicado</option>
@@ -264,7 +266,7 @@ export default function EventList({
               <div className="flex items-center justify-between">
                 <button
                   onClick={() => onViewAttendees(event.id)}
-                  className="text-green-600 hover:text-green-700 flex items-center space-x-1 text-sm"
+                  className="flex items-center space-x-1 text-sm transition-colors" style={{ color: '#B9FF50' }}
                 >
                   <Users size={16} />
                   <span>Ver Asistentes</span>
@@ -280,7 +282,7 @@ export default function EventList({
                   </button>
                   <button
                     onClick={() => onEditEvent(event)}
-                    className="p-1.5 text-gray-600 hover:text-green-600 rounded-lg hover:bg-green-50 transition-colors"
+                    className="p-1.5 text-gray-600 rounded-lg transition-colors hover:bg-gray-50" style={{ '--hover-color': '#B9FF50' } as React.CSSProperties}
                     title="Editar Evento"
                   >
                     <Edit size={16} />
