@@ -31,6 +31,13 @@ export default function Sidebar({
   ];
 
   const handleMenuClick = (id: string) => {
+    // Si estamos viendo detalles de evento y clickeamos en eventos, volver a la lista
+    if (id === 'events') {
+      // Resetear vista de detalles si existe
+      if (window.handleBackFromEventDetails) {
+        window.handleBackFromEventDetails();
+      }
+    }
     setActiveTab(id);
     setIsMobileMenuOpen(false);
   };

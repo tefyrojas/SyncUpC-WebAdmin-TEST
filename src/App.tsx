@@ -81,11 +81,21 @@ function App() {
 
   const handleViewEventDetails = (event: any) => {
     setViewingEventDetails(event);
+    setActiveTab("event-details");
   };
 
   const handleBackFromEventDetails = () => {
     setViewingEventDetails(null);
+    setActiveTab("events");
   };
+
+  // Exponer función globalmente para el sidebar
+  React.useEffect(() => {
+    window.handleBackFromEventDetails = handleBackFromEventDetails;
+    return () => {
+      delete window.handleBackFromEventDetails;
+    };
+  }, []);
 
   // Show authentication forms if not authenticated
   if (!isAuthenticated) {
