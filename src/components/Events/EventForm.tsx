@@ -229,7 +229,7 @@ export default function EventForm({ isOpen, onClose, event }: EventFormProps) {
             </button>
             <button
               type="submit"
-              className="px-6 py-2 text-white rounded-lg transition-colors" style={{ backgroundColor: '#B9FF50' }}
+              className="px-6 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
             >
               {event ? "Actualizar Evento" : "Crear Evento"}
             </button>

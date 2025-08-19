@@ -45,7 +45,7 @@ export default function LoginForm({ onLogin, onSwitchToRegister }: LoginFormProp
   return (
     <div className="min-h-screen bg-gray-50 flex">
       {/* Left Side - Green Background with Animation */}
-      <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden" style={{ backgroundColor: '#B9FF50' }}>
+      <div className="hidden lg:flex lg:w-1/2 bg-green-600 relative overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-white p-8">
             <div className={`transition-all duration-1000 ease-out ${
@@ -55,7 +55,7 @@ export default function LoginForm({ onLogin, onSwitchToRegister }: LoginFormProp
             }`}>
               {/* Logo SVG */}
               <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
-                <svg width="40" height="40" viewBox="0 0 61 60" style={{ color: '#B9FF50' }}>
+                <svg width="40" height="40" viewBox="0 0 100 100" className="text-green-600">
                   <circle cx="50" cy="50" r="45" fill="currentColor" stroke="white" strokeWidth="2"/>
                   <text x="50" y="60" textAnchor="middle" fontSize="36" fontWeight="bold" fill="white">S</text>
                 </svg>
@@ -81,7 +81,7 @@ export default function LoginForm({ onLogin, onSwitchToRegister }: LoginFormProp
         <div className="w-full max-w-md">
           {/* Mobile Header */}
           <div className="lg:hidden text-center mb-8">
-            <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: '#B9FF50' }}>
+            <div className="bg-green-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
               <svg width="32" height="32" viewBox="0 0 100 100" className="text-white">
                 <circle cx="50" cy="50" r="45" fill="currentColor"/>
                 <text x="50" y="60" textAnchor="middle" fontSize="36" fontWeight="bold" fill="green">S</text>
@@ -112,7 +112,6 @@ export default function LoginForm({ onLogin, onSwitchToRegister }: LoginFormProp
                     value={formData.email}
                     onChange={handleInputChange}
                     className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors"
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg transition-colors" style={{ '--tw-ring-color': '#B9FF50' } as React.CSSProperties}
                     placeholder="Ingresa tu correo"
                   />
                 </div>
@@ -132,7 +131,6 @@ export default function LoginForm({ onLogin, onSwitchToRegister }: LoginFormProp
                     value={formData.password}
                     onChange={handleInputChange}
                     className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors"
-                    className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg transition-colors" style={{ '--tw-ring-color': '#B9FF50' } as React.CSSProperties}
                     placeholder="Ingresa tu contraseña"
                   />
                   <button
@@ -158,8 +156,8 @@ export default function LoginForm({ onLogin, onSwitchToRegister }: LoginFormProp
               {/* Submit Button */}
               <button
                 type="submit"
-                className="text-sm transition-colors" style={{ color: '#B9FF50' }}
-                className="w-full text-white py-3 rounded-lg transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed" style={{ backgroundColor: '#B9FF50' }}
+                disabled={isLoading}
+                className="w-full bg-green-500 text-white py-3 rounded-lg hover:bg-green-600 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isLoading ? 'Iniciando sesión...' : 'Iniciar Sesión'}
               </button>
@@ -171,7 +169,7 @@ export default function LoginForm({ onLogin, onSwitchToRegister }: LoginFormProp
                 ¿No tienes una cuenta?{' '}
                 <button
                   onClick={onSwitchToRegister}
-                  className="font-medium transition-colors" style={{ color: '#B9FF50' }}
+                  className="text-green-600 hover:text-green-700 font-medium transition-colors"
                 >
                   Crear Cuenta
                 </button>

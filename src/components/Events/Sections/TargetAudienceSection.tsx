@@ -18,8 +18,7 @@ export const TargetAudienceSection: React.FC<TargetAudienceProps> = ({
             name="targetTeachers"
             checked={formData.targetTeachers}
             onChange={onChange}
-            className="rounded border-gray-300 focus:ring-2"
-            style={{ accentColor: '#B9FF50', '--tw-ring-color': '#B9FF50' } as React.CSSProperties}
+            className="rounded border-gray-300 text-lime-600 focus:ring-lime-500"
           />
           <span className="text-sm text-gray-700">Profesores</span>
         </label>
@@ -29,8 +28,7 @@ export const TargetAudienceSection: React.FC<TargetAudienceProps> = ({
             name="targetStudents"
             checked={formData.targetStudents}
             onChange={onChange}
-            className="rounded border-gray-300 focus:ring-2"
-            style={{ accentColor: '#B9FF50', '--tw-ring-color': '#B9FF50' } as React.CSSProperties}
+            className="rounded border-gray-300 text-lime-600 focus:ring-lime-500"
           />
           <span className="text-sm text-gray-700">Estudiantes</span>
         </label>
@@ -40,8 +38,7 @@ export const TargetAudienceSection: React.FC<TargetAudienceProps> = ({
             name="targetAdministrative"
             checked={formData.targetAdministrative}
             onChange={onChange}
-            className="rounded border-gray-300 focus:ring-2"
-            style={{ accentColor: '#B9FF50', '--tw-ring-color': '#B9FF50' } as React.CSSProperties}
+            className="rounded border-gray-300 text-lime-600 focus:ring-lime-500"
           />
           <span className="text-sm text-gray-700">Administrativos</span>
         </label>
@@ -51,8 +48,7 @@ export const TargetAudienceSection: React.FC<TargetAudienceProps> = ({
             name="targetGeneral"
             checked={formData.targetGeneral}
             onChange={onChange}
-            className="rounded border-gray-300 focus:ring-2"
-            style={{ accentColor: '#B9FF50', '--tw-ring-color': '#B9FF50' } as React.CSSProperties}
+            className="rounded border-gray-300 text-lime-600 focus:ring-lime-500"
           />
           <span className="text-sm text-gray-700">Público General</span>
         </label>

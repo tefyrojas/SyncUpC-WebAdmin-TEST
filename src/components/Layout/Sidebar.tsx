@@ -70,15 +70,10 @@ export default function Sidebar({
               className={`
                 w-full flex items-center px-6 py-3 text-left transition-colors duration-200
                 ${activeTab === id 
-                  ? 'border-r-3 text-gray-900' 
+                  ? 'bg-green-50 border-r-3 border-green-500 text-green-700' 
                   : 'text-gray-600 hover:bg-gray-50 hover:text-gray-800'
                 }
               `}
-              style={activeTab === id ? { 
-                backgroundColor: '#B9FF5020', 
-                borderRightColor: '#B9FF50',
-                color: '#B9FF50'
-              } : {}}
             >
               <Icon size={20} className="mr-3" />
               {label}

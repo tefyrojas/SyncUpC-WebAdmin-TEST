@@ -77,7 +77,7 @@ export default function RegisterForm({ onRegister, onSwitchToLogin }: RegisterFo
   return (
     <div className="min-h-screen bg-gray-50 flex">
       {/* Left Side - Image */}
-      <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden" style={{ backgroundColor: '#B9FF50' }}>
+      <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-lime-400 to-green-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         <img
           src="https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=800"
@@ -102,7 +102,7 @@ export default function RegisterForm({ onRegister, onSwitchToLogin }: RegisterFo
         <div className="w-full max-w-md">
           {/* Mobile Header */}
           <div className="lg:hidden text-center mb-8">
-            <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ backgroundColor: '#B9FF50' }}>
+            <div className="bg-lime-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
               <Calendar className="text-white" size={32} />
             </div>
             <h1 className="text-2xl font-bold text-gray-900 mb-2">Event Admin</h1>
@@ -130,10 +130,8 @@ export default function RegisterForm({ onRegister, onSwitchToLogin }: RegisterFo
                     value={formData.name}
                     onChange={handleInputChange}
                     className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-colors ${
-                    }
-                    className={`w-full pl-10 pr-4 py-3 border rounded-lg transition-colors ${
                       errors.name ? 'border-red-300' : 'border-gray-300'
-                    }`} style={{ '--tw-ring-color': '#B9FF50' } as React.CSSProperties}
+                    }`}
                     placeholder="Ingresa tu nombre completo"
                   />
                 </div>
@@ -154,10 +152,8 @@ export default function RegisterForm({ onRegister, onSwitchToLogin }: RegisterFo
                     value={formData.email}
                     onChange={handleInputChange}
                     className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-colors ${
-                    }
-                    className={`w-full pl-10 pr-4 py-3 border rounded-lg transition-colors ${
                       errors.email ? 'border-red-300' : 'border-gray-300'
-                    }`} style={{ '--tw-ring-color': '#B9FF50' } as React.CSSProperties}
+                    }`}
                     placeholder="Ingresa tu correo"
                   />
                 </div>
@@ -177,7 +173,6 @@ export default function RegisterForm({ onRegister, onSwitchToLogin }: RegisterFo
                     value={formData.phone}
                     onChange={handleInputChange}
                     className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-colors"
-                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg transition-colors" style={{ '--tw-ring-color': '#B9FF50' } as React.CSSProperties}
                     placeholder="Ingresa tu número de teléfono"
                   />
                 </div>
@@ -193,7 +188,6 @@ export default function RegisterForm({ onRegister, onSwitchToLogin }: RegisterFo
                   value={formData.role}
                   onChange={handleInputChange}
                   className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-colors"
-                  className="w-full px-3 py-3 border border-gray-300 rounded-lg transition-colors" style={{ '--tw-ring-color': '#B9FF50' } as React.CSSProperties}
                 >
                   <option value="organizer">Organizador de Eventos</option>
                   <option value="moderator">Moderador de Eventos</option>
@@ -215,10 +209,8 @@ export default function RegisterForm({ onRegister, onSwitchToLogin }: RegisterFo
                     value={formData.password}
                     onChange={handleInputChange}
                     className={`w-full pl-10 pr-12 py-3 border rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-colors ${
-                    }
-                    className={`w-full pl-10 pr-12 py-3 border rounded-lg transition-colors ${
                       errors.password ? 'border-red-300' : 'border-gray-300'
-                    }`} style={{ '--tw-ring-color': '#B9FF50' } as React.CSSProperties}
+                    }`}
                     placeholder="Crea una contraseña"
                   />
                   <button
@@ -246,10 +238,8 @@ export default function RegisterForm({ onRegister, onSwitchToLogin }: RegisterFo
                     value={formData.confirmPassword}
                     onChange={handleInputChange}
                     className={`w-full pl-10 pr-12 py-3 border rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-colors ${
-                    }
-                    className={`w-full pl-10 pr-12 py-3 border rounded-lg transition-colors ${
                       errors.confirmPassword ? 'border-red-300' : 'border-gray-300'
-                    }`} style={{ '--tw-ring-color': '#B9FF50' } as React.CSSProperties}
+                    }`}
                     placeholder="Confirma tu contraseña"
                   />
                   <button
@@ -267,7 +257,7 @@ export default function RegisterForm({ onRegister, onSwitchToLogin }: RegisterFo
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full text-white py-3 rounded-lg transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed" style={{ backgroundColor: '#B9FF50' }}
+                className="w-full bg-green-500 text-white py-3 rounded-lg hover:bg-green-600 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isLoading ? 'Creando Cuenta...' : 'Crear Cuenta'}
               </button>
@@ -279,7 +269,7 @@ export default function RegisterForm({ onRegister, onSwitchToLogin }: RegisterFo
                 ¿Ya tienes una cuenta?{' '}
                 <button
                   onClick={onSwitchToLogin}
-                  className="font-medium transition-colors" style={{ color: '#B9FF50' }}
+                  className="text-green-600 hover:text-green-700 font-medium transition-colors"
                 >
                   Iniciar Sesión
                 </button>
@@ -290,5 +280,4 @@ export default function RegisterForm({ onRegister, onSwitchToLogin }: RegisterFo
       </div>
     </div>
   );
-}
 }

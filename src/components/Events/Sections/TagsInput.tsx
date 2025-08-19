@@ -34,14 +34,12 @@ export const TagsInput: React.FC<TagsInputProps> = ({
           <span
             key={index}
             className="bg-lime-100 text-lime-700 px-3 py-1 rounded-full text-sm flex items-center space-x-1"
-            className="px-3 py-1 rounded-full text-sm flex items-center space-x-1" style={{ backgroundColor: '#B9FF5020', color: '#B9FF50' }}
           >
             <span>{tag}</span>
             <button
               type="button"
               onClick={() => onRemoveTag(tag)}
               className="text-lime-600 hover:text-lime-800"
-              className="transition-colors" style={{ color: '#B9FF50' }}
             >
               <X size={14} />
             </button>
@@ -60,14 +58,13 @@ export const TagsInput: React.FC<TagsInputProps> = ({
             onChange={(e) => setNewTag(e.target.value)}
             onKeyPress={handleKeyPress}
             className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent"
-            className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg transition-colors" style={{ '--tw-ring-color': '#B9FF50' } as React.CSSProperties}
             placeholder="Agregar etiqueta"
           />
         </div>
         <button
           type="button"
           onClick={handleAddTag}
-          className="px-4 py-2 text-white rounded-lg transition-colors" style={{ backgroundColor: '#B9FF50' }}
+          className="px-4 py-2 bg-lime-500 text-white rounded-lg hover:bg-lime-600 transition-colors"
         >
           Agregar
         </button>

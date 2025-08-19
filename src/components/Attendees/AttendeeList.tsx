@@ -81,13 +81,13 @@ export default function AttendeeList({ eventId, onBack }: AttendeeListProps) {
   const getStatusColor = (status: Attendee["status"]) => {
     switch (status) {
       case "confirmed":
-        return { backgroundColor: '#B9FF5020', color: '#B9FF50' };
+        return "bg-lime-100 text-lime-700";
       case "pending":
         return "bg-yellow-100 text-yellow-700";
       case "cancelled":
         return "bg-red-100 text-red-700";
       default:
-        return { backgroundColor: '#f3f4f6', color: '#374151' };
+        return "bg-gray-100 text-gray-700";
     }
   };
 
@@ -116,7 +116,7 @@ export default function AttendeeList({ eventId, onBack }: AttendeeListProps) {
         </div>
         <button
           onClick={handleExportToExcel}
-          className="text-white px-4 py-2 rounded-lg transition-colors flex items-center space-x-2" style={{ backgroundColor: '#B9FF50' }}
+          className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors flex items-center space-x-2"
         >
           <Download size={20} />
           <span>Exportar a Excel</span>
@@ -136,7 +136,7 @@ export default function AttendeeList({ eventId, onBack }: AttendeeListProps) {
               placeholder="Buscar asistentes..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg transition-colors" style={{ '--tw-ring-color': '#B9FF50' } as React.CSSProperties}
+              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
             />
           </div>
           <div className="flex items-center space-x-2">
@@ -144,7 +144,7 @@ export default function AttendeeList({ eventId, onBack }: AttendeeListProps) {
             <select
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value)}
-              className="border border-gray-300 rounded-lg px-3 py-2 transition-colors" style={{ '--tw-ring-color': '#B9FF50' } as React.CSSProperties}
+              className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-transparent"
             >
               <option value="all">Todos los Estados</option>
               <option value="confirmed">Confirmado</option>
@@ -235,8 +235,9 @@ export default function AttendeeList({ eventId, onBack }: AttendeeListProps) {
                   </td>
                   <td className="py-3 px-4">
                     <span
-                      className="px-2 py-1 rounded-full text-xs font-medium"
-                      style={getStatusColor(attendee.status)}
+                      className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(
+                        attendee.status
+                      )}`}
                     >
                       {attendee.status === 'confirmed' ? 'Confirmado' :
                        attendee.status === 'pending' ? 'Pendiente' :
@@ -246,7 +247,7 @@ export default function AttendeeList({ eventId, onBack }: AttendeeListProps) {
                   <td className="py-3 px-4">
                     <div className="flex items-center space-x-2">
                       <button
-                        className="text-sm transition-colors" style={{ color: '#B9FF50' }}
+                        className="text-green-600 hover:text-green-700 text-sm"
                         onClick={() => window.open(`mailto:${attendee.email}`)}
                       >
                         Enviar Email

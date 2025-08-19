@@ -25,7 +25,6 @@ export const LocationInfoSection: React.FC<LocationInfoProps> = ({
             value={formData.eventLocation}
             onChange={onChange}
             className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent"
-            className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg transition-colors" style={{ '--tw-ring-color': '#B9FF50' } as React.CSSProperties}
             placeholder="Nombre del lugar"
           />
         </div>
@@ -42,7 +41,6 @@ export const LocationInfoSection: React.FC<LocationInfoProps> = ({
           value={formData.address}
           onChange={onChange}
           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent"
-          className="w-full px-3 py-2 border border-gray-300 rounded-lg transition-colors" style={{ '--tw-ring-color': '#B9FF50' } as React.CSSProperties}
           placeholder="Dirección completa"
         />
       </div>
