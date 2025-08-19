@@ -45,29 +45,29 @@ export default function LoginForm({ onLogin, onSwitchToRegister }: LoginFormProp
   return (
     <div className="min-h-screen bg-gray-50 flex">
       {/* Left Side - Green Background with Animation */}
-      <div className="hidden lg:flex lg:w-1/2 relative overflow-hidden" style={{ backgroundColor: '#C8FF70' }}>
+      <div className="hidden lg:flex lg:w-1/2 bg-green-600 relative overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center text-gray-800 p-8">
+          <div className="text-center text-white p-8">
             <div className={`transition-all duration-1000 ease-out ${
               animationComplete 
                 ? 'transform translate-y-0 opacity-100 flex items-center justify-center space-x-4' 
                 : 'transform translate-y-8 opacity-0'
             }`}>
               {/* Logo SVG */}
-              <div className="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center p-2">
-                  <path fillRule="evenodd" clipRule="evenodd" d="M46.8355 54.8297C62.7707 44.2565 65.1634 22.6569 51.9266 8.86137C48.8719 5.6894 45.3082 2.97057 45.3082 3.7258C45.3082 3.87685 46.0718 5.08522 47.0391 6.39428C49.4829 9.81799 50.7047 12.4361 51.9266 16.6654C53.1994 21.2975 53.3012 28.9505 52.1303 33.4315C49.992 41.588 43.679 49.4927 36.1951 53.3192C31.2568 55.8367 28.8639 56.4912 22.9073 56.8437L18.0708 57.1457L20.8709 58.1527C21.1023 58.2359 21.3331 58.3217 21.5669 58.4085C23.5969 59.1624 25.8523 60 30.6458 60C38.3843 60 41.7444 58.2031 46.8355 54.8297Z" fill="#C8FF70"/>
-                  <path fillRule="evenodd" clipRule="evenodd" d="M26.4711 44.3068C20.7691 44.3068 16.8999 43.4509 11.9615 41.0845C10.0269 40.1279 6.6158 37.8119 4.47754 35.9993C0.913766 32.9784 0.506494 32.777 0.506494 33.8343C0.506494 37.3587 4.37575 45.9683 7.43041 49.3417C9.82323 51.9598 13.5906 53.3192 19.5472 53.722C26.8784 54.1752 33.8532 51.9598 39.9625 47.3278C43.4245 44.7096 48.5665 37.8118 47.701 36.9559C47.5483 36.8049 46.2755 37.4091 44.9518 38.416C39.097 42.595 33.8023 44.3068 26.4711 44.3068Z" fill="#C8FF70"/>
-                  <path fillRule="evenodd" clipRule="evenodd" d="M8.9068 22.9086C11.1978 14.0473 17.358 6.59568 25.9111 2.36639L30.6458 0L28.4567 0.0503502C23.2637 0.151047 16.6453 2.56778 11.9106 6.09219C5.44486 10.976 -0.562629 21.952 0.659234 26.6848C1.06652 28.1953 5.69942 33.9854 7.12493 34.7406C8.09224 35.2441 8.14314 35.093 8.14314 30.5616C8.14314 27.9939 8.49951 24.5198 8.9068 22.9086Z" fill="#C8FF70"/>
+              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                <svg width="40" height="40" viewBox="0 0 100 100" className="text-green-600">
+                  <circle cx="50" cy="50" r="45" fill="currentColor" stroke="white" strokeWidth="2"/>
+                  <text x="50" y="60" textAnchor="middle" fontSize="36" fontWeight="bold" fill="white">S</text>
                 </svg>
               </div>
               
               {/* Divider */}
-              <div className="w-px h-12 bg-gray-800 opacity-50"></div>
+              <div className="w-px h-12 bg-white opacity-50"></div>
               
               {/* Brand Text */}
               <div className="text-left">
                 <h1 className="text-4xl font-bold">SyncUpC</h1>
-                <p className="text-xl opacity-80 mt-1">
+                <p className="text-xl opacity-90 mt-1">
                   Gestiona tus eventos de manera profesional
                 </p>
               </div>
