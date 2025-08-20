@@ -130,6 +130,7 @@ export default function RegisterForm({ onRegister, onSwitchToLogin }: RegisterFo
                     value={formData.name}
                     onChange={handleInputChange}
                     className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-colors ${
+                    className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#C8FF70] focus:border-transparent transition-colors ${
                       errors.name ? 'border-red-300' : 'border-gray-300'
                     }`}
                     placeholder="Ingresa tu nombre completo"
@@ -152,6 +153,7 @@ export default function RegisterForm({ onRegister, onSwitchToLogin }: RegisterFo
                     value={formData.email}
                     onChange={handleInputChange}
                     className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-colors ${
+                    className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#C8FF70] focus:border-transparent transition-colors ${
                       errors.email ? 'border-red-300' : 'border-gray-300'
                     }`}
                     placeholder="Ingresa tu correo"
@@ -173,6 +175,7 @@ export default function RegisterForm({ onRegister, onSwitchToLogin }: RegisterFo
                     value={formData.phone}
                     onChange={handleInputChange}
                     className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-colors"
+                    className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C8FF70] focus:border-transparent transition-colors"
                     placeholder="Ingresa tu número de teléfono"
                   />
                 </div>
@@ -188,6 +191,7 @@ export default function RegisterForm({ onRegister, onSwitchToLogin }: RegisterFo
                   value={formData.role}
                   onChange={handleInputChange}
                   className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-colors"
+                  className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C8FF70] focus:border-transparent transition-colors"
                 >
                   <option value="organizer">Organizador de Eventos</option>
                   <option value="moderator">Moderador de Eventos</option>
@@ -209,6 +213,7 @@ export default function RegisterForm({ onRegister, onSwitchToLogin }: RegisterFo
                     value={formData.password}
                     onChange={handleInputChange}
                     className={`w-full pl-10 pr-12 py-3 border rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-colors ${
+                    className={`w-full pl-10 pr-12 py-3 border rounded-lg focus:ring-2 focus:ring-[#C8FF70] focus:border-transparent transition-colors ${
                       errors.password ? 'border-red-300' : 'border-gray-300'
                     }`}
                     placeholder="Crea una contraseña"
@@ -238,6 +243,7 @@ export default function RegisterForm({ onRegister, onSwitchToLogin }: RegisterFo
                     value={formData.confirmPassword}
                     onChange={handleInputChange}
                     className={`w-full pl-10 pr-12 py-3 border rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-colors ${
+                    className={`w-full pl-10 pr-12 py-3 border rounded-lg focus:ring-2 focus:ring-[#C8FF70] focus:border-transparent transition-colors ${
                       errors.confirmPassword ? 'border-red-300' : 'border-gray-300'
                     }`}
                     placeholder="Confirma tu contraseña"
@@ -257,7 +263,7 @@ export default function RegisterForm({ onRegister, onSwitchToLogin }: RegisterFo
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-full bg-green-500 text-white py-3 rounded-lg hover:bg-green-600 transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full bg-[#C8FF70] text-black py-3 rounded-lg hover:bg-[#A8E050] transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isLoading ? 'Creando Cuenta...' : 'Crear Cuenta'}
               </button>
@@ -269,7 +275,7 @@ export default function RegisterForm({ onRegister, onSwitchToLogin }: RegisterFo
                 ¿Ya tienes una cuenta?{' '}
                 <button
                   onClick={onSwitchToLogin}
-                  className="text-green-600 hover:text-green-700 font-medium transition-colors"
+                  className="text-[#C8FF70] hover:text-[#A8E050] font-medium transition-colors"
                 >
                   Iniciar Sesión
                 </button>

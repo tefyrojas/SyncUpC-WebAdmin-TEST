@@ -19,6 +19,7 @@ export const BasicInfoSection: React.FC<BasicInfoProps> = ({
           value={formData.eventTitle}
           onChange={onChange}
           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent"
+          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C8FF70] focus:border-transparent"
           placeholder="Ingrese el título del evento"
         />
       </div>
@@ -34,6 +35,7 @@ export const BasicInfoSection: React.FC<BasicInfoProps> = ({
           value={formData.eventObjective}
           onChange={onChange}
           className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent"
+          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C8FF70] focus:border-transparent"
           placeholder="Describa el objetivo del evento"
         />
       </div>

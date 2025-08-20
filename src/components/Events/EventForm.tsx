@@ -229,10 +229,11 @@ export default function EventForm({ isOpen, onClose, event }: EventFormProps) {
             </button>
             <button
               type="submit"
-              className="px-6 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
+             className="px-6 py-2 bg-[#C8FF70] text-black rounded-lg hover:bg-[#A8E050] transition-colors"
             >
               {event ? "Actualizar Evento" : "Crear Evento"}
             </button>
+          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C8FF70] focus:border-transparent"
           </div>
         </form>
       </div>

@@ -16,6 +16,7 @@ export const EventSettingsSection: React.FC<EventSettingsProps> = ({
             checked={formData.requiresRegistration}
             onChange={onChange}
             className="rounded border-gray-300 text-lime-600 focus:ring-lime-500"
+            className="rounded border-gray-300 text-[#C8FF70] focus:ring-[#C8FF70]"
           />
           <span className="text-sm text-gray-700">Requiere Registro</span>
         </label>
@@ -26,6 +27,7 @@ export const EventSettingsSection: React.FC<EventSettingsProps> = ({
             checked={formData.isPublic}
             onChange={onChange}
             className="rounded border-gray-300 text-lime-600 focus:ring-lime-500"
+            className="rounded border-gray-300 text-[#C8FF70] focus:ring-[#C8FF70]"
           />
           <span className="text-sm text-gray-700">Evento Público</span>
         </label>

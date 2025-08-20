@@ -66,7 +66,7 @@ export default function EventDetails({ event, onBack, onEdit }: EventDetailsProp
         <div className="flex items-center space-x-3">
           <button
             onClick={() => onEdit(event)}
-            className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors flex items-center space-x-2"
+            className="bg-[#C8FF70] text-black px-4 py-2 rounded-lg hover:bg-[#A8E050] transition-colors flex items-center space-x-2"
           >
             <Edit size={20} />
             <span>Editar</span>
@@ -166,7 +166,7 @@ export default function EventDetails({ event, onBack, onEdit }: EventDetailsProp
                       href={event.meetingUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-green-600 hover:text-green-700 text-sm"
+                      className="text-[#C8FF70] hover:text-[#A8E050] text-sm"
                     >
                       Enlace de la reunión
                     </a>
@@ -189,7 +189,7 @@ export default function EventDetails({ event, onBack, onEdit }: EventDetailsProp
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-gray-600">Confirmados</span>
-                <span className="font-semibold text-green-600">{event.confirmed}</span>
+                <span className="font-semibold text-[#C8FF70]">{event.confirmed}</span>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-gray-600">Capacidad Máxima</span>
@@ -208,6 +208,7 @@ export default function EventDetails({ event, onBack, onEdit }: EventDetailsProp
                 <span className="text-gray-600">Requiere Registro</span>
                 <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                   event.requiresRegistration ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-700'
+                  event.requiresRegistration ? 'bg-[#C8FF70]/20 text-[#C8FF70]' : 'bg-gray-100 text-gray-700'
                 }`}>
                   {event.requiresRegistration ? 'Sí' : 'No'}
                 </span>
@@ -216,6 +217,7 @@ export default function EventDetails({ event, onBack, onEdit }: EventDetailsProp
                 <span className="text-gray-600">Evento Público</span>
                 <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                   event.isPublic ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-700'
+                  event.isPublic ? 'bg-[#C8FF70]/20 text-[#C8FF70]' : 'bg-gray-100 text-gray-700'
                 }`}>
                   {event.isPublic ? 'Sí' : 'No'}
                 </span>
@@ -231,7 +233,7 @@ export default function EventDetails({ event, onBack, onEdit }: EventDetailsProp
                 {event.tags.map((tag: string, index: number) => (
                   <span
                     key={index}
-                    className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm"
+                    className="bg-[#C8FF70]/20 text-[#C8FF70] px-3 py-1 rounded-full text-sm"
                   >
                     {tag}
                   </span>

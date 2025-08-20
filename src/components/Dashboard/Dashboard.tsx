@@ -14,7 +14,7 @@ export default function Dashboard({ onViewEventDetails }: DashboardProps) {
       icon: Calendar,
       change: "12% desde el mes pasado",
       changeType: "increase" as const,
-      color: "bg-green-500",
+      color: "bg-[#C8FF70]",
     },
     {
       title: "Total de Asistentes",
@@ -30,7 +30,7 @@ export default function Dashboard({ onViewEventDetails }: DashboardProps) {
       icon: UserCheck,
       change: "5% desde el mes pasado",
       changeType: "increase" as const,
-      color: "bg-lime-500",
+      color: "bg-[#C8FF70]",
     },
     {
       title: "Tasa de Asistencia",

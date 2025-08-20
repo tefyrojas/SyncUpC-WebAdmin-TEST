@@ -26,7 +26,7 @@ export default function StatsCard({
           {change && (
             <p
               className={`text-sm mt-1 ${
-                changeType === "increase" ? "text-green-600" : "text-red-600"
+                changeType === "increase" ? "text-[#C8FF70]" : "text-red-600"
               }`}
             >
               {changeType === "increase" ? "↗ " : "↘ "}
