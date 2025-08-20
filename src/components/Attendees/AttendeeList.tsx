@@ -116,7 +116,7 @@ export default function AttendeeList({ eventId, onBack }: AttendeeListProps) {
         </div>
         <button
           onClick={handleExportToExcel}
-          className="bg-[#C8FF70] text-black px-4 py-2 rounded-lg hover:bg-[#A8E050] transition-colors flex items-center space-x-2"
+          className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors flex items-center space-x-2"
         >
           <Download size={20} />
           <span>Exportar a Excel</span>
@@ -137,7 +137,6 @@ export default function AttendeeList({ eventId, onBack }: AttendeeListProps) {
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
-              className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C8FF70] focus:border-transparent"
             />
           </div>
           <div className="flex items-center space-x-2">
@@ -145,7 +144,7 @@ export default function AttendeeList({ eventId, onBack }: AttendeeListProps) {
             <select
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value)}
-              className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-[#C8FF70] focus:border-transparent"
+              className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-transparent"
             >
               <option value="all">Todos los Estados</option>
               <option value="confirmed">Confirmado</option>
@@ -248,7 +247,7 @@ export default function AttendeeList({ eventId, onBack }: AttendeeListProps) {
                   <td className="py-3 px-4">
                     <div className="flex items-center space-x-2">
                       <button
-                        className="text-[#C8FF70] hover:text-[#A8E050] text-sm"
+                        className="text-green-600 hover:text-green-700 text-sm"
                         onClick={() => window.open(`mailto:${attendee.email}`)}
                       >
                         Enviar Email

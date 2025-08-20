@@ -27,7 +27,7 @@ export const DateTimeInfoSection: React.FC<DateTimeInfoProps & { showRegistratio
               required
               value={formData.startDate}
               onChange={onChange}
-              className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C8FF70] focus:border-transparent"
+              className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent"
             />
           </div>
         </div>
@@ -47,7 +47,7 @@ export const DateTimeInfoSection: React.FC<DateTimeInfoProps & { showRegistratio
               required
               value={formData.endDate}
               onChange={onChange}
-              className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C8FF70] focus:border-transparent"
+              className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent"
             />
           </div>
         </div>
@@ -66,7 +66,7 @@ export const DateTimeInfoSection: React.FC<DateTimeInfoProps & { showRegistratio
             required={showRegistrationDates}
             value={formData.registrationStart}
             onChange={onChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C8FF70] focus:border-transparent"
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
           />
         </div>
 
@@ -80,7 +80,7 @@ export const DateTimeInfoSection: React.FC<DateTimeInfoProps & { showRegistratio
             required={showRegistrationDates}
             value={formData.registrationEnd}
             onChange={onChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C8FF70] focus:border-transparent"
+            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
           />
         </div>
       </div>

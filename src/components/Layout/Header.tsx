@@ -25,8 +25,8 @@ export default function Header({ user, onLogout }: HeaderProps) {
           {/* User Menu */}
           <div className="flex items-center space-x-3">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-[#C8FF70] rounded-full flex items-center justify-center">
-                <User className="text-black" size={16} />
+              <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                <User className="text-white" size={16} />
               </div>
               <div className="hidden sm:block">
                 <p className="text-sm font-medium text-gray-900">{user?.name || 'Usuario Admin'}</p>
