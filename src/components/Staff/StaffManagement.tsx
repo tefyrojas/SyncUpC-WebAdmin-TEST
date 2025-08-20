@@ -71,7 +71,7 @@ export default function StaffManagement() {
       case 'moderator':
         return 'bg-blue-100 text-blue-700';
       case 'organizer':
-        return 'bg-green-100 text-green-700';
+        return 'bg-[#C8FF70]/20 text-[#C8FF70]';
       default:
         return 'bg-gray-100 text-gray-700';
     }
@@ -93,7 +93,7 @@ export default function StaffManagement() {
         </div>
         <button
           onClick={() => setShowAddForm(true)}
-          className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors flex items-center space-x-2"
+          className="bg-[#C8FF70] text-black px-4 py-2 rounded-lg hover:bg-[#A8E050] transition-colors flex items-center space-x-2"
         >
           <Plus size={20} />
           <span>Agregar Personal</span>
@@ -110,13 +110,13 @@ export default function StaffManagement() {
              placeholder="Buscar personal..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-             className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+             className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C8FF70] focus:border-transparent"
             />
           </div>
           <select
             value={roleFilter}
             onChange={(e) => setRoleFilter(e.target.value)}
-           className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-green-500 focus:border-transparent"
+           className="border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-[#C8FF70] focus:border-transparent"
           >
            <option value="all">Todos los Roles</option>
            <option value="admin">Administrador</option>
@@ -195,7 +195,7 @@ export default function StaffManagement() {
                   required
                   value={newStaff.name}
                   onChange={(e) => setNewStaff({ ...newStaff, name: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C8FF70] focus:border-transparent"
                   placeholder="Ingresa el nombre completo"
                 />
               </div>
@@ -207,7 +207,7 @@ export default function StaffManagement() {
                   required
                   value={newStaff.email}
                   onChange={(e) => setNewStaff({ ...newStaff, email: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C8FF70] focus:border-transparent"
                   placeholder="Ingresa el correo electrónico"
                 />
               </div>
@@ -218,7 +218,7 @@ export default function StaffManagement() {
                   type="tel"
                   value={newStaff.phone}
                   onChange={(e) => setNewStaff({ ...newStaff, phone: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C8FF70] focus:border-transparent"
                   placeholder="Ingresa el número de teléfono"
                 />
               </div>
@@ -228,7 +228,7 @@ export default function StaffManagement() {
                 <select
                   value={newStaff.role}
                   onChange={(e) => setNewStaff({ ...newStaff, role: e.target.value as Staff['role'] })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#C8FF70] focus:border-transparent"
                 >
                   <option value="organizer">Organizador</option>
                   <option value="moderator">Moderador</option>
@@ -246,7 +246,7 @@ export default function StaffManagement() {
                 </button>
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
+                  className="px-4 py-2 bg-[#C8FF70] text-black rounded-lg hover:bg-[#A8E050] transition-colors"
                 >
                   Agregar Personal
                 </button>
