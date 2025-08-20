@@ -130,6 +130,7 @@ export default function RegisterForm({ onRegister, onSwitchToLogin }: RegisterFo
                     value={formData.name}
                     onChange={handleInputChange}
                     className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-colors ${
+                    }
                     className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#C8FF70] focus:border-transparent transition-colors ${
                       errors.name ? 'border-red-300' : 'border-gray-300'
                     }`}
@@ -153,6 +154,7 @@ export default function RegisterForm({ onRegister, onSwitchToLogin }: RegisterFo
                     value={formData.email}
                     onChange={handleInputChange}
                     className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-colors ${
+                    }
                     className={`w-full pl-10 pr-4 py-3 border rounded-lg focus:ring-2 focus:ring-[#C8FF70] focus:border-transparent transition-colors ${
                       errors.email ? 'border-red-300' : 'border-gray-300'
                     }`}
@@ -213,6 +215,7 @@ export default function RegisterForm({ onRegister, onSwitchToLogin }: RegisterFo
                     value={formData.password}
                     onChange={handleInputChange}
                     className={`w-full pl-10 pr-12 py-3 border rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-colors ${
+                    }
                     className={`w-full pl-10 pr-12 py-3 border rounded-lg focus:ring-2 focus:ring-[#C8FF70] focus:border-transparent transition-colors ${
                       errors.password ? 'border-red-300' : 'border-gray-300'
                     }`}
@@ -243,6 +246,7 @@ export default function RegisterForm({ onRegister, onSwitchToLogin }: RegisterFo
                     value={formData.confirmPassword}
                     onChange={handleInputChange}
                     className={`w-full pl-10 pr-12 py-3 border rounded-lg focus:ring-2 focus:ring-lime-500 focus:border-transparent transition-colors ${
+                    }
                     className={`w-full pl-10 pr-12 py-3 border rounded-lg focus:ring-2 focus:ring-[#C8FF70] focus:border-transparent transition-colors ${
                       errors.confirmPassword ? 'border-red-300' : 'border-gray-300'
                     }`}
@@ -286,4 +290,5 @@ export default function RegisterForm({ onRegister, onSwitchToLogin }: RegisterFo
       </div>
     </div>
   );
+}
 }
