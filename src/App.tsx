@@ -7,8 +7,8 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import EventList from "./components/Events/EventList";
 import EventForm from "./components/Events/EventForm";
 import AttendeeList from "./components/Attendees/AttendeeList";
-import StaffManagement from "./components/Staff/StaffManagement";
 import EventDetails from "./components/Events/EventDetails";
+import StaffManagement from "./components/Staff/StaffManagement";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -81,6 +81,7 @@ function App() {
 
   const handleViewEventDetails = (event: any) => {
     setViewingEventDetails(event);
+    // No cambiar activeTab para mantener la navegación activa
   };
 
   const handleBackFromEventDetails = () => {
